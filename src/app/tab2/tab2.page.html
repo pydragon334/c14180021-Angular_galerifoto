@@ -1,17 +1,18 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      About us
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-label>Gamble Game</ion-label><br/>
+  <ion-label>My Answer : {{tebakan}}</ion-label><br/>
+  <ion-label>your Answer : {{jawaban}}</ion-label>
+  <ion-input [(ngModel)]="jawaban" placeholder="Masukan 0-9" type="number"></ion-input>
+  <ion-button (click)="Hasil()">Tombol</ion-button><br/>
+  <ion-label>{{hasil}}</ion-label>
+  <ion-img [src]="image" style="width: 300px; height: 300px;"></ion-img>
+  
 </ion-content>
